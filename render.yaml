@@ -4,6 +4,7 @@ services:
     env: node
     repo: https://github.com/<your-username>/translate
     branch: main
+    workingDirectory: translate-master    # <-- thêm dòng này
     buildCommand: npm install && npm run build:full
     startCommand: node dist/sign-translate/server/server.mjs
     envVars:
