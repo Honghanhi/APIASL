@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: sign-translate
+    env: node
+    repo: https://github.com/<your-username>/translate
+    branch: main
+    buildCommand: npm install && npm run build:full
+    startCommand: node dist/sign-translate/server/server.mjs
+    envVars:
+      - key: PORT
+        value: 3000
